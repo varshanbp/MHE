@@ -28,6 +28,11 @@ $res_stu1=mysqli_query($sql_conn2,$stu_qry1);
 
 $res_cnt=mysqli_num_rows($res_stu1);
 
+if($res_cnt==0) {
+  echo "<div class='w3-xlarge'>NO STUDENTS/STUDENTS DATA FOUND ON DATABASE. CONTACT DBA/HOD.</div>";
+  goto end
+}
+
 echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
 echo "<table class='w3-table w3-striped w3-border'>
       <tr class='w3-red'><th>Serial No</th><th>Name</th><th>Register No</th>
@@ -41,7 +46,7 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
   <td>".$list_res['sex']."</td><td>".$list_res['emailid']."</td><td>".$list_res['phone']."</td></tr>";
   $i++;
 }
-echo "<table>";
-
+echo "</table>";
+end:
 
  ?>

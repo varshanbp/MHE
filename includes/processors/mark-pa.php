@@ -28,9 +28,8 @@ $res_stu1=mysqli_query($sql_conn2,$stu_qry1);
 
 $res_cnt=mysqli_num_rows($res_stu1);
 
-echo "";
-
-echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
+echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>
+<iframe class='w3-container w3-border' name='if2' style='width:100%;height:100%;'></iframe>";
 echo "<table class='w3-table w3-striped w3-bordered w3-card-4'>
       <tr class='w3-red'><th>Serial No</th><th>Name</th><th>Register No</th>";
 if(date('G')<=11)
@@ -40,10 +39,12 @@ else
 echo "<th>Submit/Cancel</th></tr>";
 
 $i=1;
+echo "<form action='att-pdb.php' method='POST' target='if2'>";
 
 while($list_res=mysqli_fetch_assoc($res_stu1)) {
   echo "<tr><td>".$i."</td><td>".$list_res['name']."</td><td><input type='text' value=".$list_res['regno']."
-   name=".$list_res['regno']." style='border:0;' readonly></td>";
+   name='regno' style='border:0;' readonly></td>";
+  echo "<input type='text' value=".$sem." name='sem' hidden readonly>";
 
   if(date('G')<=11) {
     echo "<td><input class='w3-radio' type='radio' name='mast' value='P' >
@@ -62,7 +63,7 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
 
   $i++;
 }
-echo "<table><br>";
+echo "<table><br></form>";
 
 
  ?>
