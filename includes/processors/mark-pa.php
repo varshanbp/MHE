@@ -39,9 +39,9 @@ else
 echo "<th>Submit/Cancel</th></tr>";
 
 $i=1;
-echo "<form action='att-pdb.php' method='POST' target='if2'>";
 
 while($list_res=mysqli_fetch_assoc($res_stu1)) {
+  echo "<form action='att-pdb.php' method='POST' id='myForm' target='if2'>";
   echo "<tr><td>".$i."</td><td>".$list_res['name']."</td><td><input type='text' value=".$list_res['regno']."
    name='regno' style='border:0;' readonly></td>";
   echo "<input type='text' value=".$sem." name='sem' hidden readonly>";
@@ -61,6 +61,7 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
   echo "<td><input class='w3-btn w3-light-green' type='submit' />
   <input class='w3-btn w3-red' type='reset' /></td></tr>";
 
+  echo "</form>";
   $i++;
 }
 echo "<table><br></form>";
