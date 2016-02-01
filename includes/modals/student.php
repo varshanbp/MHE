@@ -86,3 +86,42 @@
   </div>
 </div>
 <!-- LIST STUDENTS STUDENT - Modal 3 - END -->
+
+<!-- LIST STUDENTS - Modal 4 - START -->
+<div id="id04" class="w3-modal">
+  <div class="w3-modal-content">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('id02').style.display='none'"
+      class="w3-closebtn">x</span>
+      <h2>Select Required Options to List Students</h2>
+    </header>
+    <div class="w3-container w3-padding-32">
+      <div style='text-align: center;'>
+      <i class="material-icons w3-xxxlarge">account_circle</i><i class="material-icons w3-xxxlarge">list</i>
+
+      <!-- FORM - START -->
+      <form action="../includes/processors/list-att.php" method="POST" target="if1" class="w3-container">
+
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" checked />
+      <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="3-4" checked />
+      <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="5-6" checked />
+      <label class="w3-validate">V / VI</label></p>
+
+      <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id04').style.display='none'" />
+      <input class="w3-btn w3-yellow" type="reset" />
+      <button class="w3-btn w3-red" onclick="document.getElementById('id04').style.display='none'">Cancel</button></p>
+
+      </form>
+      <!-- FORM - END -->
+      </div>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p style="text-align:center;">&copy; 2016 JSSV under Attribution Assurance License. All rights reserved</p>
+    </footer>
+  </div>
+</div>
+<!-- LIST STUDENTS STUDENT - Modal 4 - END -->

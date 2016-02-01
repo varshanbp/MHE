@@ -62,8 +62,7 @@ include('../includes/modals/student.php');
       <div class="w3-dropdown-content w3-card-4">
         <a href="#" style="color:black;" onclick="document.getElementById('id03').style.display='block'">Mark Today's Attendance</a>
         <a href="#" style="color:black;">Edit Today's Attendance</a>
-        <a href="#" style="color:black;">Review Today's Attendance</a>
-        <a href="#" style="color:black;">Finalize Todays's Attendance</a>
+        <a href="#" style="color:black;" onclick="document.getElementById('id04').style.display='block'">Review Today's Attendance</a>
       </div>
     </div>
     <div class="w3-dropdown-hover">

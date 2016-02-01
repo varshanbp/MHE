@@ -46,7 +46,7 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
   <td>".$list_res['sex']."</td><td>".$list_res['emailid']."</td><td>".$list_res['phone']."</td></tr>";
   $i++;
 }
-echo "</table>";
+echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
 end:
 
  ?>

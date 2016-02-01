@@ -1,6 +1,8 @@
-<?php
+ <?php
 require_once('../db-conn.php');
-#require_once('../authenticator.php');
+require_once('../authenticator.php');
+
+date_default_timezone_set('Asia/Calcutta');
 
 echo "<!DOCTYPE html>
 <html>
@@ -38,10 +40,19 @@ if($res_cnt==0) {
   }
 }
 
-echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>";
+echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>".$att_val;
 
 if($att_val=="P") {
-  $sql_qry3="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$uid_reg'";
+#  if(date('G')<=11)
+    $sql_qry3="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$uid_reg'";
+#  else {
+#    $sql_qry="SELECT `$day` FROM `$q_tbnm` WHERE `regnum`='$uid_reg'";
+#    $sql_res=mysqli_fetch_row(mysqli_query($sql_conn2, $sql_qry));
+#    if($sql_res[0]=="P")
+#      $sql_qry3="UPDATE `$q_tbnm` SET `$day`='PP' WHERE `regnum`='$uid_reg'";
+#    else
+#      $sql_qry3="UPDATE `$q_tbnm` SET `$day`='AP' WHERE `regnum`='$uid_reg'";
+#  }
   mysqli_query($sql_conn2, $sql_qry3) or die("ERROR IN MARKING".mysqli_error($sql_conn2));
   echo "SUCCESS";
 } else {

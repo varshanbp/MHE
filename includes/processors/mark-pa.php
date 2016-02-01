@@ -8,6 +8,8 @@ echo "<!DOCTYPE html>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel='stylesheet' href='../../digi-attend/css/w3.css'>";
 
+date_default_timezone_set('Asia/Calcutta');
+
 if(isset($_POST["sem"])) {
   $sem=$_POST["sem"];
   $usem=explode("-",$sem);

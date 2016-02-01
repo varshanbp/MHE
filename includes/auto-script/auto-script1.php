@@ -19,11 +19,11 @@ if($csem<=11&&$csem>=6) {
 
       $sql_qry1="CREATE TABLE IF NOT EXISTS `$tbname3` ( `regnum` VARCHAR(10) NOT NULL ,
         `dept` CHAR(2) NOT NULL , `sems` INT(1) NOT NULL , filler CHAR(2),
-        `01` CHAR(1), `02` CHAR(1), `03` CHAR(1), `04` CHAR(1), `05` CHAR(1), `06` CHAR(1), `07` CHAR(1),
-        `08` CHAR(1), `09` CHAR(1), `10` CHAR(1), `11` CHAR(1), `12` CHAR(1), `13` CHAR(1), `14` CHAR(1),
-        `15` CHAR(1), `16` CHAR(1), `17` CHAR(1), `18` CHAR(1), `19` CHAR(1), `20` CHAR(1), `21` CHAR(1),
-        `22` CHAR(1), `23` CHAR(1), `24` CHAR(1), `25` CHAR(1), `26` CHAR(1), `27` CHAR(1), `28` CHAR(1),
-        `29` CHAR(1), `30` CHAR(1), `31` CHAR(1), PRIMARY KEY (`regnum`(10)),
+        `01` CHAR(2), `02` CHAR(2), `03` CHAR(2), `04` CHAR(2), `05` CHAR(2), `06` CHAR(2), `07` CHAR(2),
+        `08` CHAR(2), `09` CHAR(2), `10` CHAR(2), `11` CHAR(1), `12` CHAR(2), `13` CHAR(2), `14` CHAR(2),
+        `15` CHAR(2), `16` CHAR(2), `17` CHAR(2), `18` CHAR(1), `19` CHAR(2), `20` CHAR(2), `21` CHAR(2),
+        `22` CHAR(2), `23` CHAR(2), `24` CHAR(2), `25` CHAR(1), `26` CHAR(2), `27` CHAR(2), `28` CHAR(2),
+        `29` CHAR(2), `30` CHAR(2), `31` CHAR(2), PRIMARY KEY (`regnum`(10)),
         FOREIGN KEY (regnum) REFERENCES stulist(regno) ON UPDATE CASCADE, FOREIGN KEY (dept) REFERENCES stulist(department) ON UPDATE CASCADE,
         FOREIGN KEY (sems) REFERENCES stulist(sem) ON UPDATE CASCADE) ENGINE = InnoDB;";
 
@@ -53,11 +53,11 @@ if($csem<=11&&$csem>=6) {
 
       $sql_qry1="CREATE TABLE IF NOT EXISTS `$tbname3` ( `regnum` VARCHAR(10) NOT NULL ,
         `dept` CHAR(2) NOT NULL , `sems` INT(1) NOT NULL , filler CHAR(2),
-        `01` CHAR(1), `02` CHAR(1), `03` CHAR(1), `04` CHAR(1), `05` CHAR(1), `06` CHAR(1), `07` CHAR(1),
-        `08` CHAR(1), `09` CHAR(1), `10` CHAR(1), `11` CHAR(1), `12` CHAR(1), `13` CHAR(1), `14` CHAR(1),
-        `15` CHAR(1), `16` CHAR(1), `17` CHAR(1), `18` CHAR(1), `19` CHAR(1), `20` CHAR(1), `21` CHAR(1),
-        `22` CHAR(1), `23` CHAR(1), `24` CHAR(1), `25` CHAR(1), `26` CHAR(1), `27` CHAR(1), `28` CHAR(1),
-        `29` CHAR(1), `30` CHAR(1), `31` CHAR(1), PRIMARY KEY (`regnum`(10)),
+        `01` CHAR(2), `02` CHAR(2), `03` CHAR(2), `04` CHAR(2), `05` CHAR(2), `06` CHAR(2), `07` CHAR(2),
+        `08` CHAR(2), `09` CHAR(2), `10` CHAR(2), `11` CHAR(2), `12` CHAR(2), `13` CHAR(2), `14` CHAR(2),
+        `15` CHAR(2), `16` CHAR(2), `17` CHAR(2), `18` CHAR(2), `19` CHAR(2), `20` CHAR(2), `21` CHAR(2),
+        `22` CHAR(2), `23` CHAR(2), `24` CHAR(2), `25` CHAR(2), `26` CHAR(2), `27` CHAR(2), `28` CHAR(2),
+        `29` CHAR(2), `30` CHAR(2), `31` CHAR(2), PRIMARY KEY (`regnum`(10)),
         FOREIGN KEY (regnum) REFERENCES stulist(regno) ON UPDATE CASCADE, FOREIGN KEY (dept) REFERENCES stulist(department) ON UPDATE CASCADE,
         FOREIGN KEY (sems) REFERENCES stulist(sem) ON UPDATE CASCADE) ENGINE = InnoDB;";
 
