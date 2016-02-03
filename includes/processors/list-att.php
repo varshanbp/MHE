@@ -57,6 +57,8 @@ while($list_res1=mysqli_fetch_row($res_stu1)) {
   $res_stu2=mysqli_query($sql_conn2,$stu_qry2);
   $list_res2=mysqli_fetch_assoc($res_stu2);
   for($j=1;$j<=31;$j++) {
+    if($j<=9)
+      $j="0".$j;
     echo "<td>".$list_res2[$j]."</td>";
   }
   echo "</tr>";$i++;

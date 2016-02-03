@@ -54,7 +54,6 @@ include('../includes/modals/student.php');
         <a href="#" style="color:black;">Add Student IA Marks</a>
         <a href="#" style="color:black;">Edit Student IA Marks</a>
         <a href="#" style="color:black;">Review Student IA Marks</a>
-        <a href="#" style="color:black;">Finalize Student IA Marks</a>
       </div>
     </div>
     <div class="w3-dropdown-hover">
@@ -70,8 +69,6 @@ include('../includes/modals/student.php');
       <div class="w3-dropdown-content w3-card-4">
         <a href="#" style="color:black;">Review Previous Attendance</a>
         <a href="#" style="color:black;">Edit Previous Attendance</a>
-        <a href="#" style="color:black;">Review Previous Attendance</a>
-        <a href="#" style="color:black;">Finalize Monthly Attendance</a>
       </div>
     </div>
     <a href="#">Report Generation</a>
@@ -81,7 +78,7 @@ include('../includes/modals/student.php');
 </div>
 
 <div class="w3-padding">
-<iframe class="w3-container w3-border" name="if1" style="width:100%;height:100vh;"></iframe>
+<iframe class="w3-container w3-border" onclick="iframeLoaded()" name="if1" style="width:100%;height:100vh;"></iframe>
 </div>
 
 <footer class="w3-container w3-teal">
@@ -95,6 +92,14 @@ function menu_open() {
 function menu_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
 }
+function iframeLoaded() {
+      var iFrameID = document.getElementById('if1');
+      if(iFrameID) {
+            // here you can make the height, I delete it first, then I make it again
+            iFrameID.height = "";
+            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+      }
+  }
 </script>
 
 </body>
