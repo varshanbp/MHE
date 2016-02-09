@@ -69,7 +69,9 @@
 
     $ssid=session_id();
     $ssid_hash=password_hash($ssid, PASSWORD_DEFAULT);
+    $eh_ssid=password_hash($ssid_hash, PASSWORD_DEFAULT);
     setcookie("sid_hash", $ssid_hash, time() + (1800), "/");
+    setcookie("eh_ssid", $eh_ssid, time() + (1800), "/");
     setcookie("ckname", "sid_hash", time() + (1800), "/");
     setcookie("dept", $dept, time() + (1800), "/");
     $url='../digi-attend/index.php';

@@ -78,7 +78,7 @@ include('../includes/modals/student.php');
 </div>
 
 <div class="w3-padding">
-<iframe class="w3-container w3-border" onclick="iframeLoaded()" name="if1" style="width:100%;height:100vh;"></iframe>
+<iframe class="w3-container w3-border" onclick="iframeLoaded()" name="if1" style="width:100%;height:250vh;"></iframe>
 </div>
 
 <footer class="w3-container w3-teal">
@@ -92,14 +92,6 @@ function menu_open() {
 function menu_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
 }
-function iframeLoaded() {
-      var iFrameID = document.getElementById('if1');
-      if(iFrameID) {
-            // here you can make the height, I delete it first, then I make it again
-            iFrameID.height = "";
-            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-      }
-  }
 </script>
 
 </body>

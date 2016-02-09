@@ -30,7 +30,7 @@ $res_cnt=mysqli_num_rows($res_stu1);
 
 if($res_cnt==0) {
   echo "<div class='w3-xlarge'>NO STUDENTS/STUDENTS DATA FOUND ON DATABASE. CONTACT DBA/HOD.</div>";
-  goto end;
+  endOfPage();
 }
 
 echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
@@ -47,6 +47,9 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
   $i++;
 }
 echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
-end:
+
+function endOfPage() {
+  exit();
+}
 
  ?>
