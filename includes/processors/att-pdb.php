@@ -42,21 +42,28 @@ if($res_cnt==0) {
 
 echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>".$att_val;
 
-if($att_val=="P") {
-#  if(date('G')<=11)
+$sql_qry="SELECT `$day` FROM `$q_tbnm` WHERE `regnum`='$uid_reg'";
+$sql_res1=mysqli_fetch_row(mysqli_query($sql_conn2, $sql_qry));
+
+if(strlen($sql_res1[0])==2){
+  echo "ALREADY MARKED ATTENDANACE FOR ROLL NUMBER : ".$uid_reg.".
+  TODAY, PLESASE SELECT EDIT OPTION <br> STATUS : ".$sql_res1[0];
+} elseif($att_val=="P") {
+  if(date('G')<=11)
     $sql_qry3="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$uid_reg'";
-#  else {
-#    $sql_qry="SELECT `$day` FROM `$q_tbnm` WHERE `regnum`='$uid_reg'";
-#    $sql_res=mysqli_fetch_row(mysqli_query($sql_conn2, $sql_qry));
-#    if($sql_res[0]=="P")
-#      $sql_qry3="UPDATE `$q_tbnm` SET `$day`='PP' WHERE `regnum`='$uid_reg'";
-#    else
-#      $sql_qry3="UPDATE `$q_tbnm` SET `$day`='AP' WHERE `regnum`='$uid_reg'";
-#  }
+  else {
+    $sql_res2=$sql_res1[0]."P";
+    $sql_qry3="UPDATE `$q_tbnm` SET `$day`='$sql_res2' WHERE `regnum`='$uid_reg'";
+  }
   mysqli_query($sql_conn2, $sql_qry3) or die("ERROR IN MARKING".mysqli_error($sql_conn2));
   echo "SUCCESS";
 } else {
-  $sql_qry3="UPDATE `$q_tbnm` SET `$day`='A' WHERE `regnum`='$uid_reg'";
+  if(date('G')<=11)
+    $sql_qry3="UPDATE `$q_tbnm` SET `$day`='A' WHERE `regnum`='$uid_reg'";
+  else {
+    $sql_res2=$sql_res1[0]."A";
+    $sql_qry3="UPDATE `$q_tbnm` SET `$day`='$sql_res2' WHERE `regnum`='$uid_reg'";
+  }
   mysqli_query($sql_conn2, $sql_qry3) or die("ERROR IN MARKING".mysqli_error($sql_conn2));
   echo "SUCCESS";
 }
