@@ -12,7 +12,7 @@
   <a href="#">Reports</a>
   <a href="#">Status</a>
   <a href="#">Marks</a>
-  <a href="#">Log Out</a>
+  <a href="#">Log In</a>
 </nav>
 
 <header class="w3-container w3-teal">
