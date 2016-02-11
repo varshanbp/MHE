@@ -45,7 +45,7 @@ echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>".$att_val;
 $sql_qry="SELECT `$day` FROM `$q_tbnm` WHERE `regnum`='$uid_reg'";
 $sql_res1=mysqli_fetch_row(mysqli_query($sql_conn2, $sql_qry));
 
-if(strlen($sql_res1[0])==2){
+if((strlen($sql_res1[0])==1&&date('G')<=11)||(strlen($sql_res1[0])==2&&date('G')>=12)) {
   echo "ALREADY MARKED ATTENDANACE FOR ROLL NUMBER : ".$uid_reg.".
   TODAY, PLESASE SELECT EDIT OPTION <br> STATUS : ".$sql_res1[0];
 } elseif($att_val=="P") {

@@ -67,6 +67,6 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
   $i++;
 }
 echo "<table><br></form>";
-
+echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
 
  ?>

@@ -42,37 +42,39 @@ include('../includes/modals/student.php');
 <!-- SUB MENU 1 - START -->
   <nav class="w3-topnav w3-green">
     <a class="w3-xlarge">Options</a>
+    <a href="#" onclick="document.getElementById('id02').style.display='block'">List Students</a>
     <div class="w3-dropdown-hover">
-      <a href="#">Students Related</a>
+      <a href="#">Today's Main Attendance</a>
       <div class="w3-dropdown-content w3-card-4">
-        <a href="#" style="color:black;" onclick="document.getElementById('id02').style.display='block'">List Students</a>
+        <a href="#" style="color:black;" onclick="document.getElementById('id03').style.display='block'">Mark</a>
+        <a href="#" style="color:black;">Edit</a>
+        <a href="#" style="color:black;" onclick="document.getElementById('id04').style.display='block'">Review</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <a href="#">Main Attendance Records</a>
+      <div class="w3-dropdown-content w3-card-4">
+        <a href="#" style="color:black;">Edit</a>
+        <a href="#" style="color:black;">Review</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <a href="#">Subject Wise Attendance</a>
+      <div class="w3-dropdown-content w3-card-4">
+        <a href="#" style="color:black;">Mark</a>
+        <a href="#" style="color:black;">Edit</a>
+        <a href="#" style="color:black;">Review</a>
       </div>
     </div>
     <div class="w3-dropdown-hover">
       <a href="#">IA Marks Related</a>
       <div class="w3-dropdown-content w3-card-4">
-        <a href="#" style="color:black;">Add Student IA Marks</a>
-        <a href="#" style="color:black;">Edit Student IA Marks</a>
-        <a href="#" style="color:black;">Review Student IA Marks</a>
-      </div>
-    </div>
-    <div class="w3-dropdown-hover">
-      <a href="#">Today's Attendance</a>
-      <div class="w3-dropdown-content w3-card-4">
-        <a href="#" style="color:black;" onclick="document.getElementById('id03').style.display='block'">Mark Today's Attendance</a>
-        <a href="#" style="color:black;">Edit Today's Attendance</a>
-        <a href="#" style="color:black;" onclick="document.getElementById('id04').style.display='block'">Review Today's Attendance</a>
-      </div>
-    </div>
-    <div class="w3-dropdown-hover">
-      <a href="#">Attendance Records</a>
-      <div class="w3-dropdown-content w3-card-4">
-        <a href="#" style="color:black;">Review Previous Attendance</a>
-        <a href="#" style="color:black;">Edit Previous Attendance</a>
+        <a href="#" style="color:black;">Add IA Marks</a>
+        <a href="#" style="color:black;">Edit IA Marks</a>
+        <a href="#" style="color:black;">Review IA Marks</a>
       </div>
     </div>
     <a href="#">Report Generation</a>
-    <a href="#">Sort</a>
   </nav>
 <!-- SUB MENU 1 - END -->
 </div>

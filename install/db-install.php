@@ -48,7 +48,7 @@ else {
 $sql_ctb1="CREATE TABLE IF NOT EXISTS `$dbname1`.`$tbname1` ( `uid` VARCHAR(6) NOT NULL , `name` VARCHAR(100) NOT NULL ,
  `emailid` VARCHAR(100) NOT NULL , `department` CHAR(2) NOT NULL , `dob` DATE NOT NULL ,
   `pin_hash` VARCHAR(255) NOT NULL , `bk_qs` TEXT NOT NULL , `bk_ans` VARCHAR(255) NOT NULL , `validate` CHAR(1) NOT NULL,
-   PRIMARY KEY (`uid`(6))) ENGINE = MyISAM;";
+   PRIMARY KEY (`uid`(6))) ENGINE = InnoDB;";
 
 $sql_ctb2="CREATE TABLE IF NOT EXISTS `$dbname2`.`$tbname2` ( `name` VARCHAR(100) NOT NULL , `regno` VARCHAR(10) NOT NULL ,
   `department` CHAR(2) NOT NULL , `sem` INT(1) NOT NULL, `dob` DATE NOT NULL , `sex` CHAR(1) NOT NULL ,
