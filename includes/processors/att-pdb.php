@@ -40,14 +40,23 @@ if($res_cnt==0) {
   }
 }
 
-echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>".$att_val;
+# DEBUGGING CODE
+# echo $q_tbnm."<br>".$day."<br>".$uid_reg."<br>".$att_val;
+
+echo "SEMESTER : ".$sem."<br>REGISTER NUMBER : ".$uid_reg."<br>";
 
 $sql_qry="SELECT `$day` FROM `$q_tbnm` WHERE `regnum`='$uid_reg'";
 $sql_res1=mysqli_fetch_row(mysqli_query($sql_conn2, $sql_qry));
 
+if((strlen($sql_res1[0])==0&&date('G')>=12)) {
+  echo "MORNING ATTENDANCE NOT MARKED, HENCE THIS OPERATION NOT ALLOWED TO
+  PREVENT FRAUD.<br>CONTACT ADMINISTRATOR TO MARK ATTENDANACE MANUALLY";
+  exit();
+}
+
 if((strlen($sql_res1[0])==1&&date('G')<=11)||(strlen($sql_res1[0])==2&&date('G')>=12)) {
-  echo "ALREADY MARKED ATTENDANACE FOR ROLL NUMBER : ".$uid_reg.".
-  TODAY, PLESASE SELECT EDIT OPTION <br> STATUS : ".$sql_res1[0];
+  echo "ATTENDANCE ALREADY MARKED FOR ABOVE REGISTER NUMBER TODAY.
+  <br>PLEASE SELECT EDIT OPTION <br> STATUS : ".$sql_res1[0];
 } elseif($att_val=="P") {
   if(date('G')<=11)
     $sql_qry3="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$uid_reg'";

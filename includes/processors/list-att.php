@@ -40,30 +40,61 @@ if($res_cnt==0) {
   endOfPage();
 }
 
-echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
-echo "<table class='w3-table w3-striped w3-border'>
-      <tr class='w3-red'><th>Sl No.</th><th>Name</th><th>Register No</th>";
 
-      for($i=1;$i<=31;$i++) {
-        echo "<th>$i</th>";
-      }
-      echo "</tr>";
+# LIST ONLY TODAY ATTENDANCE - START
 
-$i=1;
+if(isset($_POST["td-param"])=="1"){
+  echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
+  echo "<table class='w3-table w3-striped w3-border'>
+        <tr class='w3-red'><th>Sl No.</th><th>Name</th><th>Register No</th>";
+  echo "<th>".date('d F Y')."</th>";
 
-while($list_res1=mysqli_fetch_row($res_stu1)) {
-  echo "<tr><td>".$i."</td><td>".$list_res1[0]."</td><td>".$list_res1[1]."</td>";
-  $stu_qry2="SELECT * FROM `$q_tbnm` WHERE regnum='$list_res1[1]'";
-  $res_stu2=mysqli_query($sql_conn2,$stu_qry2);
-  $list_res2=mysqli_fetch_assoc($res_stu2);
-  for($j=1;$j<=31;$j++) {
-    if($j<=9)
-      $j="0".$j;
-    echo "<td>".$list_res2[$j]."</td>";
+  $i=1;
+
+  while($list_res1=mysqli_fetch_row($res_stu1)) {
+    echo "<tr><td>".$i."</td><td>".$list_res1[0]."</td><td>".$list_res1[1]."</td>";
+    $stu_qry3="SELECT `".date('d')."` FROM `$q_tbnm` WHERE regnum='$list_res1[1]'";
+    $res_stu3=mysqli_query($sql_conn2,$stu_qry3);
+    $list_res3=mysqli_fetch_row($res_stu3);
+
+    echo "<td>".$list_res3[0]."</td>";
+
+    echo "</tr>";$i++;
   }
-  echo "</tr>";$i++;
+  echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
+
+# LIST ONLY TODAY ATTENDANCE - END
+
+} else {
+
+  # CODE FOR FULL ATTENDANCE - START
+
+  echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>";
+  echo "<table class='w3-table w3-striped w3-border'>
+        <tr class='w3-red'><th>Sl No.</th><th>Name</th><th>Register No</th>";
+
+        for($i=1;$i<=31;$i++) {
+          echo "<th>$i</th>";
+        }
+        echo "</tr>";
+
+  $i=1;
+
+  while($list_res1=mysqli_fetch_row($res_stu1)) {
+    echo "<tr><td>".$i."</td><td>".$list_res1[0]."</td><td>".$list_res1[1]."</td>";
+    $stu_qry2="SELECT * FROM `$q_tbnm` WHERE regnum='$list_res1[1]'";
+    $res_stu2=mysqli_query($sql_conn2,$stu_qry2);
+    $list_res2=mysqli_fetch_assoc($res_stu2);
+    for($j=1;$j<=31;$j++) {
+      if($j<=9)
+        $j="0".$j;
+      echo "<td>".$list_res2[$j]."</td>";
+    }
+    echo "</tr>";$i++;
+  }
+  echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
+  # CODE FOR FULL ATTENDANCE - END
 }
-echo "</table><div style='text-align:center;' class='w3-xxxlarge'>--------------- END OF LIST ---------------</div>";
 
 function endOfPage() {
   exit();
