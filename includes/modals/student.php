@@ -24,18 +24,19 @@
       <!-- FORM - START -->
       <form action="../includes/processors/list-stu.php" method="POST" target="if1" class="w3-container">
 
-      <p><input class="w3-radio" type="radio" name="sem" value="1-2" checked />
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2"  />
       <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="3-4" checked />
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
       <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="5-6" checked />
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id02').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
-      <button class="w3-btn w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel</button></p>
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id02').style.display='none'" /></p>
 
       </form>
       <!-- FORM - END -->
@@ -63,18 +64,19 @@
       <!-- FORM - START -->
       <form action="../includes/processors/mark-pa.php" method="POST" target="if1" class="w3-container">
 
-      <p><input class="w3-radio" type="radio" name="sem" value="1-2" checked />
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" />
       <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="3-4" checked />
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
       <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="5-6" checked />
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id03').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
-      <button class="w3-btn w3-red" onclick="document.getElementById('id03').style.display='none'">Cancel</button></p>
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id03').style.display='none'" /></p>
 
       </form>
       <!-- FORM - END -->
@@ -102,18 +104,19 @@
       <!-- FORM - START -->
       <form action="../includes/processors/list-att.php" method="POST" target="if1" class="w3-container">
 
-      <p><input class="w3-radio" type="radio" name="sem" value="1-2" checked />
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" />
       <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="3-4" checked />
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
       <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="5-6" checked />
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id04').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
-      <button class="w3-btn w3-red" onclick="document.getElementById('id04').style.display='none'">Cancel</button></p>
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id04').style.display='none'" /></p>
 
       </form>
       <!-- FORM - END -->
@@ -141,20 +144,21 @@
       <!-- FORM - START -->
       <form action="../includes/processors/list-att.php" method="POST" target="if1" class="w3-container">
 
-      <p><input class="w3-radio" type="radio" name="sem" value="1-2" checked />
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" />
       <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="3-4" checked />
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
       <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
 
-      <input class="w3-radio" type="radio" name="sem" value="5-6" checked />
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
       <input type="hidden" name="td-param" value="1" />
 
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id05').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
-      <button class="w3-btn w3-red" onclick="document.getElementById('id04').style.display='none'">Cancel</button></p>
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id05').style.display='none'" /></p>
 
       </form>
       <!-- FORM - END -->
