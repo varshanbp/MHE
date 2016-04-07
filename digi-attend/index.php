@@ -55,7 +55,7 @@ include('../includes/modals/student.php');
         <a href="#" style="color:black;" onclick="document.getElementById('id04').style.display='block'">Review</a>
       </div>
     </div>
-    <div class="w3-dropdown-hover">
+ <!--   <div class="w3-dropdown-hover">
       <a href="#">Subject Wise Attendance</a>
       <div class="w3-dropdown-content w3-card-4">
         <a href="#" style="color:black;">Mark</a>
@@ -70,8 +70,8 @@ include('../includes/modals/student.php');
         <a href="#" style="color:black;">Edit IA Marks</a>
         <a href="#" style="color:black;">Review IA Marks</a>
       </div>
-    </div>
-    <a href="#">Report Generation</a>
+    </div>-->
+    <a href="http://localhost/phpmyadmin/index.php?db=assets&target=db_export.php&what=pdf&token=15a3736be45cb1887067c81121978291&phpMyAdmin=l415cmjq6gitkgq51q6tlns82chiidnk">Report Generation</a>
   </nav>
 <!-- SUB MENU 1 - END -->
 </div>

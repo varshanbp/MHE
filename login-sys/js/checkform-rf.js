@@ -67,6 +67,7 @@ function fnVerify() {
     document.getElementById('img6').src = "images/close.png";
     document.getElementById("fname").style.color = "#e20000";
     document.getElementById("fnerror").innerHTML = "Please Enter your First Name as per Capitalization";
+    return false;
   }
 }
 
@@ -80,6 +81,7 @@ function lnVerify() {
     document.getElementById('img7').src = "images/close.png";
     document.getElementById("lname").style.color = "#e20000";
     document.getElementById("lnerror").innerHTML = "Please Enter your Last Name as per Capitalization";
+    return false;
   }
 }
 

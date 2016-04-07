@@ -27,7 +27,7 @@
 
 
 define('DBHOST', 'localhost');
-define('DBUNAME', 'root');
+define('DBUNAME', 'test');
 define('DBPASS', '');
 
 # PREDEFINED VALUES, DO NOT CHANGE UNLESS TABLE OR DATABASE EXIST WITH SAME NAME
