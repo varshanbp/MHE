@@ -28,7 +28,7 @@ License URL License for CSS files: http://creativecommons.org/licenses/by/3.0/
 				<div class="top_section">
 					<div class="section">
 						<div class="input username">
-							<input type="text" name="uname" id="uname" oninput="nmCheck()" placeholder="User Name" style="color: #87aa32;" required /><span><img id="img1" src="images/close.png" /></span>
+							<input type="text" name="uname" id="uname" oninput="nmCheck()" placeholder="User Name" size="6" maxlength="6" style="color: #87aa32;" required /><span><img id="img1" src="images/close.png" /></span>
 						</div>
 						<div class="input password">
 							<input type="password" name="pwd" id="pwd" oninput="pwCheck()" placeholder="6 Digit Pin" size="6" maxlength="6" style="color: #e20000;" required /><span><img id="img2" src="images/close.png" /></span>

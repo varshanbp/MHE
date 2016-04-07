@@ -8,11 +8,6 @@
 <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
   <a href="javascript:void(0)" onclick="menu_close()" class="w3-closenav w3-large">Close &times;</a>
   <a href="#">Home</a>
-  <a href="#">Attendance</a>
-  <a href="#">Reports</a>
-  <a href="#">Status</a>
-  <a href="#">Marks</a>
-  <a href="#">Log Out</a>
 </nav>
 
 <header class="w3-container w3-teal">
