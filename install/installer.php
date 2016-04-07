@@ -23,12 +23,20 @@ require_once('../includes/db-data.php');
 </header>
 
 <div class="w3-padding">
-  HELLO
-  <form action="">
-    <input type="button" class="w3-btn" value="Button"/>
-    <i class="material-icons">arrow forward</i>
+  <form action="db-install.php" target="if3">
+    <input type="submit" class="w3-btn" value="STEP 1 : Database Installation" />
+    <br><i class="material-icons">arrow_downward</i>
   </form>
-  <iframe class="w3-container w3-border" name="if1" style="width:100%;height:250vh;"></iframe>
+  <form action="../includes/auto-script/auto-script1.php" target="if3">
+    <input type="submit" class="w3-btn" value="STEP 2 : Tables Initialization" />
+    <br><i class="material-icons">arrow_downward</i>
+  </form>
+  <form action="">
+    <input type="submit" class="w3-btn" value="Button" />
+    <br><br><br>
+  </form>
+
+  <iframe class="w3-container w3-border" name="if3" style="width:100%;height:250vh;"></iframe>
 </div>
 
 <footer class="w3-container w3-teal">
