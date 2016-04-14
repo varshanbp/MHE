@@ -42,9 +42,9 @@ echo "<div class='w3-xxlarge'>STUDENTS OF SEMESTER ".$sem."</div>
 echo "<table class='w3-table w3-striped w3-bordered w3-card-4'>
       <tr class='w3-red'><th>Serial No</th><th>Name</th><th>Register No</th>";
 if(date('G')<=11)
-  echo "<th>Morning Attendance</th>";
+  echo "<th colspan=2>Morning Attendance</th>";
 else
-  echo "<th>Afternoon Attendance</th>";
+  echo "<th colspan=2>Afternoon Attendance</th>";
 echo "<th>Submit/Cancel</th></tr>";
 
 $i=1;
@@ -59,8 +59,8 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
 
   if(date('G')<=11) {
     $sql_qry4="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$reg'";
-    echo "<!--td><input class='w3-radio' type='radio' name='mast' value='P' >
-    <label class='w3-validate'>PRESENT</label></td-->
+    echo "<td><input class='w3-radio' type='radio' name='mast' value='P' >
+    <label class='w3-validate'>PRESENT</label></td>
     <td><input class='w3-radio' type='radio' name='mast' value='A' >
     <label class='w3-validate'>ABSENT</label></td>";
   } else {
@@ -74,8 +74,8 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
       $sql_qry4="UPDATE `$q_tbnm` SET `$day`='$att_value' WHERE `regnum`='$reg'";
     }
 
-    echo "<!--td><input class='w3-radio' type='radio' name='aast' value='P' >
-    <label class='w3-validate'>PRESENT</label></td-->
+    echo "<td><input class='w3-radio' type='radio' name='aast' value='P' >
+    <label class='w3-validate'>PRESENT</label></td>
     <td><input class='w3-radio' type='radio' name='aast' value='A' >
     <label class='w3-validate'>ABSENT</label></td>";
   }

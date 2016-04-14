@@ -27,12 +27,12 @@ if($csem<=11&&$csem>=6) {
         FOREIGN KEY (regnum) REFERENCES stulist(regno) ON UPDATE CASCADE, FOREIGN KEY (dept) REFERENCES stulist(department) ON UPDATE CASCADE,
         FOREIGN KEY (sems) REFERENCES stulist(sem) ON UPDATE CASCADE) ENGINE = InnoDB;";
 
-      mysqli_query($sql_conn2, $sql_qry1);
-      if (!$sql_qry1) {
+      $sql_res=mysqli_query($sql_conn2, $sql_qry1);
+      if (!$sql_res) {
           die("Unable to Create DB : " .$i. mysqli_error($sql_conn2)."<br>");
       }
       else {
-          echo "SUCCESSFULLY CREATED TO DATABASE ".$i."<br>";
+          echo "Successfully Created Database ".$i."<br>";
       }
     }
   }

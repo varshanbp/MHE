@@ -54,10 +54,11 @@ if((strlen($sql_res1[0])==0&&date('G')>=12)) {
   exit();
 }
 
-if((strlen($sql_res1[0])==1&&date('G')<=11)||(strlen($sql_res1[0])==2&&date('G')>=12)) {
+/*if((strlen($sql_res1[0])==1&&date('G')<=11)||(strlen($sql_res1[0])==2&&date('G')>=12)) {
   echo "ATTENDANCE ALREADY MARKED FOR ABOVE REGISTER NUMBER TODAY.
   <br>PLEASE SELECT EDIT OPTION <br> STATUS : ".$sql_res1[0];
-} elseif($att_val=="P") {
+} else*/
+  if($att_val=="P") {
   if(date('G')<=11)
     $sql_qry3="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$uid_reg'";
   else {

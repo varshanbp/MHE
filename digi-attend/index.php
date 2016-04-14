@@ -3,6 +3,11 @@ require_once('../includes/db-conn.php');
 require_once('../includes/authenticator.php');
 include('../includes/modals/logout.php');
 include('../includes/modals/student.php');
+
+$pma_conn1="http://".DBHOST."/phpmyadmin/index.php?lang=en&pma_username=".DBUNAME."&pma_password=".DBPASS;
+$pma_acc=file_get_contents("$pma_conn");
+
+$pma_conn2="http://".DBHOST."/phpmyadmin/db_structure.php?db=".DBNAME2;
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +19,7 @@ include('../includes/modals/student.php');
 
 <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
   <a href="javascript:void(0)" onclick="menu_close()" class="w3-closenav w3-large">Close &times;</a>
-  <a href="#">Home</a>
-  <a href="#">Portal</a>
+  <a href="../index.php">Home</a>
   <a href="#" onclick="document.getElementById('id01').style.display='block'">Log Out</a>
 </nav>
 
@@ -44,14 +48,14 @@ include('../includes/modals/student.php');
       <a href="#">Today's Main Attendance</a>
       <div class="w3-dropdown-content w3-card-4">
         <a href="#" style="color:black;" onclick="document.getElementById('id03').style.display='block'">Mark</a>
-        <a href="#" style="color:black;">Edit</a>
+        <a href="#" style="color:black;" onclick="document.getElementById('id06').style.display='block'">Edit</a>
         <a href="#" style="color:black;" onclick="document.getElementById('id05').style.display='block'">Review</a>
       </div>
     </div>
     <div class="w3-dropdown-hover">
       <a href="#">Main Attendance Records</a>
       <div class="w3-dropdown-content w3-card-4">
-        <a href="#" style="color:black;">Edit</a>
+        <a href="<?php echo $pma_conn2; ?>" style="color:black;">Edit</a>
         <a href="#" style="color:black;" onclick="document.getElementById('id04').style.display='block'">Review</a>
       </div>
     </div>
@@ -71,7 +75,7 @@ include('../includes/modals/student.php');
         <a href="#" style="color:black;">Review IA Marks</a>
       </div>
     </div>-->
-    <a href="http://localhost/phpmyadmin/index.php?db=assets&target=db_export.php&what=pdf&token=15a3736be45cb1887067c81121978291&phpMyAdmin=l415cmjq6gitkgq51q6tlns82chiidnk">Report Generation</a>
+    <a href="<?php echo $pma_conn1; ?>">Report Generation</a>
   </nav>
 <!-- SUB MENU 1 - END -->
 </div>

@@ -28,16 +28,29 @@
 <!-- SUB MENU 1 - END -->
 </div>
 
-<div class="w3-padding">
+<div class="w3-container w3-pale-red w3-leftbar w3-rightbar w3-border-red">
 
 <h4><ul>
 <li>Project is compatible with OSI(Open Source Initiative) Standards,
 W3C(World Wide Web Consortium) Markup Standards and W3C(World Wide Web Consortium) CSS Standards.</li><br>
 <li>Made by Johnson S, Suraj P, Suvith Kumar CV and Varshan BP.</li><br>
 <li>This software is licensed under an Open Source Initiative approved license, Attribution Assurance License.</li>
-</ul></h4>
+<br>
+<div class="w3-container w3-white w3-center w3-leftbar w3-rightbar w3-border-green">
+<img src="includes/images/mnti.png" alt="MNTI Logo" />
+<img src="includes/images/osi.png" alt="Open Source Initiative Logo" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="includes/images/web.png" alt="HTML, CSS and JS Logo" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="includes/images/php.png" alt="PHP Logo" />
+<img src="includes/images/sql.png" alt="MYSQL Logo" />
+</div><br>
+
+<li>The Above Logos and Names are Registered Trademark of Respective Owners</li>
+</h4>
 
 <br><br>
+
 
 <h3>ATTRIBUTION ASSURANCE LICENSE</h3>
 

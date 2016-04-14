@@ -26,8 +26,8 @@
 # END OF DOCUMENTATION
 
 
-define('DBHOST', 'localhost');
-define('DBUNAME', 'test');
+define('DBHOST', 'localhost'); //ADD PROTOCOL http/https
+define('DBUNAME', 'root');
 define('DBPASS', '');
 
 # PREDEFINED VALUES, DO NOT CHANGE UNLESS TABLE OR DATABASE EXIST WITH SAME NAME

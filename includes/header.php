@@ -7,7 +7,7 @@
 
 <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
   <a href="javascript:void(0)" onclick="menu_close()" class="w3-closenav w3-large">Close &times;</a>
-  <a href="../index.php">Log In</a>
+  <a href="../index.php">Home</a>
   <a href="../login-sys/login.php">Log In</a>
 </nav>
 

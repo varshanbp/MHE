@@ -7,12 +7,7 @@
 
  <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
    <a href="javascript:void(0)" onclick="menu_close()" class="w3-closenav w3-large">Close &times;</a>
-   <a href="#">Home</a>
-   <a href="#">Attendance</a>
-   <a href="#">Reports</a>
-   <a href="#">Status</a>
-   <a href="#">Marks</a>
-   <a href="#">Log Out</a>
+   <a href="../index.php">Home</a>
  </nav>
 
  <header class="w3-container w3-teal">
@@ -48,15 +43,15 @@
  $user_chk=mysqli_fetch_assoc($uck_sql);
 
  if($user_chk["emailid"]==$email||$user_chk["uid"]==$uid) {
-   echo "<p class='w3-xlarge' style='text-align: center;'>You have Visited Wrong Page. You are forbidden to visit this page.</p>
-   <p class='w3-large' style='text-align: center;'>You will be redirected soon.</p>";
+   echo "<p class='w3-xlarge' style='text-align: center;'>You have Already Registered.</p>
+   <p class='w3-large' style='text-align: center;'>Go to Home from Side Menu</p>";
    include('footer.php');
    exit();
  }
 
  if(!isset($_POST["uname"]) || !isset($_POST["pwd"])) {
    echo "<p class='w3-xlarge' style='text-align: center;'>You have Visited Wrong Page. You are forbidden to visit this page.</p>
-   <p class='w3-large' style='text-align: center;'>You will be redirected soon.</p>";
+   <p class='w3-large' style='text-align: center;'>Go to Home from Side Menu</p>";
  }
 
  $pin_hash=password_hash($pin, PASSWORD_DEFAULT);

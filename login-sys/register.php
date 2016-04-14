@@ -19,6 +19,18 @@ License URL License for CSS files: http://creativecommons.org/licenses/by/3.0/
 <script src="js/checkform-rf.js"></script>
 </head>
 <body>
+	<header class="w3-container w3-teal w3-padding-16">
+		<h1>Digital Attendance Portal Registration Page</h1>
+	</header>
+
+	<div class="w3-container w3-padding-32">
+			<nav class="w3-topnav w3-green">
+			<a class="w3-xlarge">Options</a>
+			<a href="../index.php">Home</a>
+			<a href="#">Register</a>
+			<a href="login.php">Login</a>
+	</div>
+
 		<!--start sign_up-->
 		<div class="sign_up">
 			<!--start form-->

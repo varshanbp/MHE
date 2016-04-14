@@ -55,7 +55,7 @@
     <header class="w3-container w3-teal">
       <span onclick="document.getElementById('id03').style.display='none'"
       class="w3-closebtn">x</span>
-      <h2>Select Required Options to List Students</h2>
+      <h2>Select Required Options to Mark Attendance</h2>
     </header>
     <div class="w3-container w3-padding-32">
       <div style='text-align: center;'>
@@ -95,7 +95,7 @@
     <header class="w3-container w3-teal">
       <span onclick="document.getElementById('id04').style.display='none'"
       class="w3-closebtn">x</span>
-      <h2>Select Required Options to List Students</h2>
+      <h2>Select Required Options to Review Monthly Attendance</h2>
     </header>
     <div class="w3-container w3-padding-32">
       <div style='text-align: center;'>
@@ -135,7 +135,7 @@
     <header class="w3-container w3-teal">
       <span onclick="document.getElementById('id05').style.display='none'"
       class="w3-closebtn">x</span>
-      <h2>Select Required Options to List Students</h2>
+      <h2>Select Required Options to Review Today's Attendance</h2>
     </header>
     <div class="w3-container w3-padding-32">
       <div style='text-align: center;'>
@@ -153,8 +153,6 @@
       <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
-      <input type="hidden" name="td-param" value="1" />
-
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id05').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
       <input class="w3-btn w3-red" type="reset" value="Cancel"
@@ -170,3 +168,83 @@
   </div>
 </div>
 <!-- LIST STUDENTS STUDENT - Modal 5 - END -->
+
+<!-- LIST STUDENTS - Modal 6 - START -->
+<div id="id06" class="w3-modal">
+  <div class="w3-modal-content">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('id06').style.display='none'"
+      class="w3-closebtn">x</span>
+      <h2>Select Required Options to Edit Attendance</h2>
+    </header>
+    <div class="w3-container w3-padding-32">
+      <div style='text-align: center;'>
+      <i class="material-icons w3-xxxlarge">account_circle</i><i class="material-icons w3-xxxlarge">list</i>
+
+      <!-- FORM - START -->
+      <form action="../includes/processors/edit-pa.php" method="POST" target="if1" class="w3-container">
+
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" />
+      <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
+      <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
+      <label class="w3-validate">V / VI</label></p>
+
+      <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id06').style.display='none'" />
+      <input class="w3-btn w3-yellow" type="reset" />
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id06').style.display='none'" /></p>
+
+      </form>
+      <!-- FORM - END -->
+      </div>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p style="text-align:center;">&copy; 2016 JSSV under Attribution Assurance License. All rights reserved</p>
+    </footer>
+  </div>
+</div>
+<!-- LIST STUDENTS STUDENT - Modal 6 - END -->
+
+<!-- LIST STUDENTS - Modal 7 - START -->
+<div id="id06" class="w3-modal">
+  <div class="w3-modal-content">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('id07').style.display='none'"
+      class="w3-closebtn">x</span>
+      <h2>Select Required Options to Edit Attendance</h2>
+    </header>
+    <div class="w3-container w3-padding-32">
+      <div style='text-align: center;'>
+      <i class="material-icons w3-xxxlarge">account_circle</i><i class="material-icons w3-xxxlarge">list</i>
+
+      <!-- FORM - START -->
+      <form action="../includes/processors/edit-pa.php" method="POST" target="if1" class="w3-container">
+
+      <p><input class="w3-radio" type="radio" name="sem" value="1-2" />
+      <label class="w3-validate">I / II</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="3-4" />
+      <label class="w3-validate">III / IV</label>&nbsp;&nbsp;&nbsp;
+
+      <input class="w3-radio" type="radio" name="sem" value="5-6" />
+      <label class="w3-validate">V / VI</label></p>
+
+      <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id07').style.display='none'" />
+      <input class="w3-btn w3-yellow" type="reset" />
+      <input class="w3-btn w3-red" type="reset" value="Cancel"
+      onclick="document.getElementById('id07').style.display='none'" /></p>
+
+      </form>
+      <!-- FORM - END -->
+      </div>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p style="text-align:center;">&copy; 2016 JSSV under Attribution Assurance License. All rights reserved</p>
+    </footer>
+  </div>
+</div>
+<!-- LIST STUDENTS STUDENT - Modal 7 - END -->
