@@ -57,21 +57,30 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
 
   $reg=$list_res['regno'];
 
+  $stu_qry4="SELECT `".date('d')."` FROM `$q_tbnm` WHERE regnum='$reg'";
+  $res_stu4=mysqli_query($sql_conn2,$stu_qry4) or die("error");
+  $list_res4=mysqli_fetch_assoc($res_stu4);
+
   if(date('G')<=11) {
-    $sql_qry4="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$reg'";
+    if($list_res4["$day"]==NULL) {
+      $sql_qry4="UPDATE `$q_tbnm` SET `$day`='P' WHERE `regnum`='$reg'";
+      mysqli_query($sql_conn2, $sql_qry4) or die("FATAL ERROR CONTACT DEVELOPER".mysqli_error($sql_conn2));
+    }
     echo "<!--td><input class='w3-radio' type='radio' name='mast' value='P' >
     <label class='w3-validate'>PRESENT</label></td-->
     <td><input class='w3-radio' type='radio' name='mast' value='A' >
     <label class='w3-validate'>ABSENT</label></td>";
   } else {
-    $stu_qry4="SELECT `".date('d')."` FROM `$q_tbnm` WHERE regnum='$reg'";
+    /*$stu_qry4="SELECT `".date('d')."` FROM `$q_tbnm` WHERE regnum='$reg'";
     $res_stu4=mysqli_query($sql_conn2,$stu_qry4);
-    $list_res4=mysqli_fetch_row($res_stu4);
+    $list_res4=mysqli_fetch_row($res_stu4);*/
     if((strlen($list_res4[0])==0)) {
       $sql_qry4="UPDATE `$q_tbnm` SET `$day`=NULL WHERE `regnum`='$reg'";
+      mysqli_query($sql_conn2, $sql_qry4) or die("FATAL ERROR CONTACT DEVELOPER".mysqli_error($sql_conn2));
     } else {
       $att_value=$list_res4[0]."P";
       $sql_qry4="UPDATE `$q_tbnm` SET `$day`='$att_value' WHERE `regnum`='$reg'";
+      mysqli_query($sql_conn2, $sql_qry4) or die("FATAL ERROR CONTACT DEVELOPER".mysqli_error($sql_conn2));
     }
 
     echo "<!--td><input class='w3-radio' type='radio' name='aast' value='P' >
@@ -80,7 +89,7 @@ while($list_res=mysqli_fetch_assoc($res_stu1)) {
     <label class='w3-validate'>ABSENT</label></td>";
   }
 
-  mysqli_query($sql_conn2, $sql_qry4) or die("FATAL ERROR CONTACT DEVELOPER".mysqli_error($sql_conn2));
+//  mysqli_query($sql_conn2, $sql_qry4) or die("FATAL ERROR CONTACT DEVELOPER".mysqli_error($sql_conn2));
 
   echo "<td><input class='w3-btn w3-light-green' type='submit' />
   <input class='w3-btn w3-red' type='reset' /></td></tr>";

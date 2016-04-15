@@ -153,6 +153,8 @@
       <input class="w3-radio" type="radio" name="sem" value="5-6" />
       <label class="w3-validate">V / VI</label></p>
 
+      <input type="hidden" name="td-param" value="1" />
+
       <p><input class="w3-btn w3-light-green" type="submit" onclick="document.getElementById('id05').style.display='none'" />
       <input class="w3-btn w3-yellow" type="reset" />
       <input class="w3-btn w3-red" type="reset" value="Cancel"

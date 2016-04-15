@@ -48,7 +48,7 @@ License URL License for CSS files: http://creativecommons.org/licenses/by/3.0/
 					<div id="nmerror" class="break"></div>
 					<div id="pwerror" class="break"></div>
 					<div class="buttons">
-						<a href="#">Forgot password?</a>
+						<!--a href="#">Forgot password?</a-->
 						<input class="bluebutton" type="submit" value="Login" />
 						<div class="clear"> </div>
 					</div>

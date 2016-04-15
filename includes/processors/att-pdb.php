@@ -8,8 +8,7 @@ echo "<!DOCTYPE html>
 <html>
 <title>DA Data Processing :: Digtal Attendance by JSSV</title>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel='stylesheet' href='../../digi-attend/css/w3.css'>
-<script src='../js/onsubmit.js'></script>";
+<link rel='stylesheet' href='../../digi-attend/css/w3.css'>";
 
 $day=date('d');
 $month=date('m_');
