@@ -1,0 +1,39 @@
+For Social Media Logo in Mobile Code
+------------------------------------
+
+style.css:3364 @(max-width:320px)
+
+a i.facebook
+{
+no-repeat 0px -40px
+}
+
+a i.twitter
+{
+no-repeat 1px 1px
+}
+
+a i.google-plus
+{
+no-repeat -1px -121px
+}
+
+a i.dribble
+{
+no-repeat -1px -81px
+}
+
+--------------------------------------
+--------------------------------------
+For Logo
+--------------------------------------
+
+style.css:3436 @(max-width:320px)
+
+a.navbar-brand img
+{
+    top: 17px;
+    left: 0px;
+    position: absolute;
+    width: 50%;
+}
